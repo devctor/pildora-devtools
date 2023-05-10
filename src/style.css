@@ -1,0 +1,158 @@
+:root {
+  --margin-xl: 4rem;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: #121212;
+    background: #eee;
+  }
+
+  body a {
+    color: #809fff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #eee;
+    background: #121212;
+  }
+
+  body a {
+    color: #809fff;
+  }
+}
+
+.container {
+  max-width: 1024px;
+  margin-inline: auto;
+}
+
+h1 {
+  border: 3px dotted gold;
+  padding: 2rem 1rem;
+}
+
+input:focus {
+  background-color: gold;
+  color:brown;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+#states {
+  margin-block-start: var(--margin-xl);
+  /* border: 2px dotted gold; */
+}
+
+#states nav {
+  height: 50vh;
+  display: grid;
+  place-items: center;
+}
+
+#states ul {
+    list-style: none;
+    display:flex;
+    gap: 2rem;
+  }
+
+#states ul li {
+    border: 2px solid hotpink;
+    padding: 12px 20px;
+    cursor: pointer;
+  }
+
+#states ul li:hover {
+    border: 2px solid gold;
+    padding: 12px 20px;
+    background-color: brown;
+    color: black;
+  }
+
+
+#grid-flex .flex {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 4rem;
+  margin-inline: auto;
+}
+
+#grid-flex .flex p {
+  flex-grow: 1;
+}
+
+
+/* Grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px;
+  column-gap: 0.5em;
+  grid-column-gap: 0.5em; /* for older browsers */
+  row-gap: 0.5em;
+  grid-row-gap: 0.5em; /* for older browsers */
+  margin-block-end: 3rem;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.one {
+  background-color: yellow;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  z-index: 100;
+}
+
+.two {
+  background-color: red;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  display: grid;
+  /* grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end]; */
+  grid-template-areas: "start middle end" ;
+}
+
+.three {
+  background-color: green;
+}
+
+.four {
+  background-color: pink;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.five {
+  background-color: orange;
+}
+
+.six {
+  background-color: purple;
+}
+
+.nested-1 {
+  background-color: grey;
+}
+
+.nested-2 {
+  background-color: turquoise;
+}
+
+.nested-3 {
+  background-color: violet;
+}
+
+
+.not-used {
+  isolation: isolate;
+}
